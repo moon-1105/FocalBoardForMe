@@ -7,5 +7,5 @@ services:
       ports:
         - "8000:8000"
       environment:
-        - FOCALBOARD_SITEURL=http://3.35.55.0:8000
+        - FOCALBOARD_SITEURL=http://<myIp>:8000
         - FOCALBOARD_DATABASE_DRIVER=memory
