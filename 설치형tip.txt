@@ -1,0 +1,16 @@
+https://docs.mattermost.com/boards/focalboard/installing-boards.html
+>> 위 가이드 대로 설치 하면 됨 
+   focalboard latest 버전으로 지정해서 설치 하자 
+   (맨 위에 있길래 beta로 했다가 오류..)
+
+설정파일은 처음 설치 시에 여기에 위치 했으나 
+/opt/focalboard/config.json
+
+실제 기동 시에는 아래 위치로 옮겨야 했다 
+/opt/focalboard/bin/config.json
+
+여기 설정 파일에다가 연동할 DB만 지정해두면 
+기동 시에 bin 파일 아래의 dbconfig 파일에 따라 table 이나 columns 이 자동으로 생긴다 
+
+시작은 bin 파일의 start 파일 말고 서비스 형태로 시작해야 이슈가 없다 
+systemctl start focalboard.service
